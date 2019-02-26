@@ -734,7 +734,7 @@
 
                 const nameParts = files[0].name.split(".")
 
-                if (nameParts[nameParts.length - 1] === "txt") {
+                if (nameParts[nameParts.length - 1] === "txt" || nameParts[nameParts.length - 1] === "names") {
                     const reader = new FileReader()
 
                     reader.addEventListener("load", () => {
@@ -1047,6 +1047,10 @@
 
     const listenBboxVocSave = () => {
         document.getElementById("saveVocBboxes").addEventListener("click", () => {
+            alert("안해")
+
+            return
+            /*
             const folderPath = document.getElementById("vocFolder").value
 
             const zip = new JSZip()
@@ -1108,11 +1112,16 @@
                 .then((blob) => {
                     saveAs(blob, "bboxes_voc.zip")
                 })
+            */
         })
     }
 
     const listenBboxCocoSave = () => {
         document.getElementById("saveCocoBboxes").addEventListener("click", () => {
+            alert("귀찮으니까")
+
+            return
+            /*
             const zip = new JSZip()
 
             const result = {
@@ -1175,6 +1184,7 @@
                 .then((blob) => {
                     saveAs(blob, "bboxes_coco.zip")
                 })
+            */
         })
     }
 
